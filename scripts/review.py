@@ -39,14 +39,35 @@ def main():
     diff = getDiff()
 
     prompt = f"""
-    Review the following code changes and give feedback.
+            You are a senior software engineer reviewing a pull request.
 
-    Mandatory:
-    Provide output in clean HTML format suitable for email.
+            Review the following code changes.
 
-    Code Changes:
-    {diff}
-    """
+            Requirements:
+            1. Give a Code Quality Score out of 10.
+            2. Provide inline suggestions referencing file name and line number if possible.
+            3. Mention issues like performance problems, bad practices, security risks.
+            4. Provide improved code suggestions where necessary.
+            5. Format the entire response in clean HTML suitable for email.
+
+            Structure of output:
+
+            <h2>Code Quality Score</h2>
+
+            <h2>Summary</h2>
+
+            <h2>Inline Suggestions</h2>
+            <ul>
+            <li>File: filename | Line: number | Issue | Suggestion</li>
+            </ul>
+
+            <h2>Security / Performance Issues</h2>
+
+            <h2>Improved Code Suggestions</h2>
+
+            Code Changes:
+            {diff}
+        """
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
