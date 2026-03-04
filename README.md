@@ -113,7 +113,7 @@ Repository → Settings → Secrets → Actions
 Clone the repository:
 
 ```
-git clone https://github.com/yourusername/AI-CODE-REVIEW.git
+git clone https://github.com/harish-kush/AI-CODE-REVIEWER.git
 ```
 
 Install dependencies:
