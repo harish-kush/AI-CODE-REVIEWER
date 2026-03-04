@@ -1,0 +1,1 @@
+print("gemini api integrated successfully")
