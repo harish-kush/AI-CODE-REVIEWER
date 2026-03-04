@@ -11,7 +11,7 @@ client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def main():
     diff = getDiff()
-    prompt = f"Review the following code changes and give the feedback: \n\n {diff}"
+    prompt = f"Review the following code changes and give the feedback: \n\n Mandatory: provide the output in html so that we can send it in mail \n\n {diff}"
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
