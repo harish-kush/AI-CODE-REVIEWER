@@ -28,7 +28,7 @@ jobs:
         env:
             GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
             EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-            RECEIVER_EMAILL: ${{ secrets.RECEIVER_EMAILL}}
+            RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL}}
             SENDER_EMAIL: ${{secrets.SENDER_EMAIL}}
         run: |
           python ./scripts/review.py
