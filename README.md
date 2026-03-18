@@ -139,13 +139,6 @@ python scripts/review.py
 * Slack / Discord notifications
 * Web dashboard for review analytics
 
----
-
-# 📄 Resume Highlight
-
-Developed an **AI-powered automated code review system** using GitHub Actions and Google Gemini API that analyzes commit diffs, generates structured HTML feedback with inline suggestions and quality scoring, and delivers review reports via email.
-
----
 
 # 👨‍💻 Author
 
